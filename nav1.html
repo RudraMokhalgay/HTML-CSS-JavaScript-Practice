@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 25px;
+        }
+
+        /* Main layout */
+        .container {
+            display: flex;
+            gap: 25px;
+            min-height: calc(100vh - 50px);
+        }
+
+        /* Left user sidebar */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 5px;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+        }
+
+        .user img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user h3 {
+            font-size: 15px;
+            color: #334155;
+        }
+
+        .user p {
+            font-size: 12px;
+            color: #16a34a;
+            margin-top: 5px;
+        }
+
+        .user:hover {
+            background-color: #f8fafc;
+        }
+
+        /* Right cards section */
+        .content {
+            flex: 1;
+            min-width: 0;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        .content h1 {
+            color: #1e293b;
+            margin-bottom: 25px;
+        }
+
+        /* Cards grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .card {
+            min-height: 180px;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            box-shadow: 0 5px 15px #6366f130;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Hover animation */
+        .card:hover {
+            transform: scale(1.06);
+            box-shadow: 0 12px 25px #00000025;
+            z-index: 1;
+        }
+
+        /* Different card colors */
+        .card:nth-child(2) {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+        }
+
+        .card:nth-child(3) {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .card:nth-child(4) {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+
+        /* Responsive design */
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SECTION: USERS -->
+        <aside class="sidebar">
+            <h2>Users</h2>
+
+            <div class="user">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Rahul">
+                <div>
+                    <h3>Rahul Sharma</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <img src="https://i.pravatar.cc/100?img=47" alt="Priya">
+                <div>
+                    <h3>Priya Singh</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <img src="https://i.pravatar.cc/100?img=11" alt="Aman">
+                <div>
+                    <h3>Aman Verma</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <img src="https://i.pravatar.cc/100?img=44" alt="Neha">
+                <div>
+                    <h3>Neha Patel</h3>
+                    <p>Offline</p>
+                </div>
+            </div>
+
+            <div class="user">
+                <img src="https://i.pravatar.cc/100?img=68" alt="Arjun">
+                <div>
+                    <h3>Arjun Mehta</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RIGHT SECTION: CARDS -->
+        <main class="content">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>Card One</h2>
+                    <p>Welcome to your dashboard. Explore your information here.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Card Two</h2>
+                    <p>View your projects and track your latest activities.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Card Three</h2>
+                    <p>Check your progress and see your latest updates.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Card Four</h2>
+                    <p>Manage your tasks and stay organized every day.</p>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

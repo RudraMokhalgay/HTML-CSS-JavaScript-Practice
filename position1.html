@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 1. The Big Box (The Anchor) */
+        .big-box {
+            width: 300px;
+            height: 200px;
+            background-color: #e0e0e0;
+            border: 2px solid #333;
+            
+            /* Crucial: Makes this box the coordinate system for children */
+            position: relative; 
+        }
+
+        /* 2. The Small Box (The Absolute Element) */
+        .small-box {
+            width: 80px;
+            height: 80px;
+            background-color: #ff4757;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            
+            /* Position absolute */
+            position: absolute;
+            
+            /* --- CENTERING WITH CALC --- */
+            top: calc(50% - 40px);   /* 50% down, minus half the box height (80/2) */
+            left: calc(50% - 40px);  /* 50% right, minus half the box width (80/2) */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="big-box">
+        <div class="small-box">Small</div>
+    </div>
+
+</body>
+</html>

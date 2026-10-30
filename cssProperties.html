@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+        }
+
+        .container p:nth-child(odd) {
+            color: red;
+        }
+
+        .container p:nth-child(even) {
+            color: aqua;
+        }
+
+        .container::after {
+            content: "####";
+        }
+
+        .container::before {
+            content: "####";
+        }
+
+        .header {
+            height: 4rem;
+            background: linear-gradient(to left, #C1F2FA, #3FBBCB, #772FFC);
+        }
+
+        .circle {
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background: radial-gradient(red, orange);
+            position: relative;
+            left: 50px
+        }
+        .box{
+            height:500px ;
+            width:500px ;
+            background-color: radial-gradient(to left,yellow,orange);
+            position: relative;
+        }
+        .childbox{
+            height:200px;
+            width:200px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <div class="circle"></div>
+    <div class="box">
+        <div class="childbox">
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+    </div>
+
+</body>
+</html>

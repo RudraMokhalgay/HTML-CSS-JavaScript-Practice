@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="box"></div>
+    </div>
+
+    <script>
+        console.log("JavaScript is Working");
+
+        // Select the box element
+        const box = document.getElementById("box");
+
+        // Apply CSS using JavaScript
+        box.style.height = "400px";
+        box.style.width = "400px";
+        box.style.border = "1px solid black";
+        box.style.cursor = "pointer";
+
+        const random=Math.random()
+        console.log(Math.floor(random*256),`random number`)
+
+        // Add click event
+        box.addEventListener("click", () => {
+            // box.style.backgroundColor = "red";
+            const red=Math.floor(Math.random() * 256)
+            const green=Math.floor(Math.random() * 256)
+            const blue=Math.floor(Math.random() * 256)
+
+            box.style.background=`rgb(${red},${green},${blue})`
+
+        });
+
+        console.log(box.style);
+    </script>
+
+</body>
+</html>

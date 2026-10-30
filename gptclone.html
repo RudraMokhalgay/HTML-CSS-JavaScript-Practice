@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            color: white;
+            height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: #171717;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .new-chat {
+            background-color: #303030;
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .new-chat:hover {
+            background-color: #414141;
+        }
+
+        .history-title {
+            color: #999;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .history-item {
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .history-item:hover {
+            background-color: #303030;
+        }
+
+        .profile {
+            margin-top: auto;
+            padding: 12px;
+            border-top: 1px solid #333;
+        }
+
+        /* Main chat area */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .topbar {
+            padding: 20px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+        }
+
+        .chat-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .chat-content h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* Prompt box */
+        .input-container {
+            width: 100%;
+            max-width: 750px;
+            background-color: #303030;
+            border-radius: 25px;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #444;
+        }
+
+        .input-container input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 16px;
+            min-width: 0;
+        }
+
+        .input-container input::placeholder {
+            color: #aaa;
+        }
+
+        .add-btn {
+            background: transparent;
+            color: white;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .send-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .bottom-area {
+            padding: 0 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .suggestions button {
+            background: transparent;
+            color: #ddd;
+            border: 1px solid #555;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .suggestions button:hover {
+            background-color: #333;
+        }
+
+        .disclaimer {
+            color: #999;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 700px) {
+            .sidebar {
+                display: none;
+            }
+
+            .chat-content h1 {
+                font-size: 25px;
+            }
+
+            .topbar {
+                padding: 18px;
+            }
+
+            .suggestions button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">ChatGPT</div>
+
+        <div class="new-chat">＋ New chat</div>
+
+        <div class="history-title">Your chats</div>
+
+        <div class="history-item">Learning HTML and CSS</div>
+        <div class="history-item">JavaScript interview questions</div>
+        <div class="history-item">React learning roadmap</div>
+        <div class="history-item">Build a website</div>
+
+        <div class="profile">👤 My Profile</div>
+    </aside>
+
+    <!-- Main section -->
+    <main class="main">
+
+        <header class="topbar">
+            ChatGPT <span style="color:#aaa;">⌄</span>
+        </header>
+
+        <section class="chat-content">
+            <h1>What can I help with?</h1>
+
+            <div class="input-container">
+                <button class="add-btn">＋</button>
+
+                <input
+                    type="text"
+                    placeholder="Message ChatGPT..."
+                    aria-label="Message ChatGPT"
+                >
+
+                <button class="send-btn" aria-label="Send message">
+                    ↑
+                </button>
+            </div>
+        </section>
+
+        <footer class="bottom-area">
+            <div class="suggestions">
+                <button>💡 Get advice</button>
+                <button>💻 Write code</button>
+                <button>📚 Learn something</button>
+                <button>✍️ Help me write</button>
+            </div>
+
+            <p class="disclaimer">
+                This is a simple ChatGPT-inspired UI built with HTML and CSS.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

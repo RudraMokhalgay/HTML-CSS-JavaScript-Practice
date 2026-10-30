@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            border: 1px solid black;
+            height: 600px;
+            width: 600px;
+        }
+        .topleft{
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+        .topright{
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+        .bottomleft{
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+        .bottomright{
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+        .centered{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+        .header {
+            height: 4rem;
+            background: linear-gradient(to left, #C1F2FA, #3FBBCB, #772FFC);
+        }
+    </style>
+</head>
+<body>
+    <header class="header"></header>
+    <div class="container">
+        <div class="topleft">Top Left</div>
+        <div class="bottomleft">Bottom Left</div>
+        <div class="centered">Centered</div>
+        <div class="topright">Top Right</div>
+        <div class="bottomright">Bottom Right</div>
+    </div>
+        <div class="container">
+        <div class="topleft">Top Left</div>
+        <div class="bottomleft">Bottom Left</div>
+        <div class="centered">Centered</div>
+        <div class="topright">Top Right</div>
+        <div class="bottomright">Bottom Right</div>
+    </div>
+</body>
+</html>

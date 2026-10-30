@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChannelHub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f3f6;
+            color: #222;
+        }
+
+        
+        header {
+            background: #171717;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        
+        .container {
+            max-width: 1250px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+      
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        
+        .card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        
+        .thumbnail {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+       
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease,
+                        filter 0.4s ease,
+                        box-shadow 0.4s ease;
+        }
+
+        
+        .thumbnail:hover img {
+            transform: scale(1.08);
+            filter: brightness(0.85);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+       
+        .card-details {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px;
+        }
+
+        
+        .channel-logo {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .logo-green {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .logo-orange {
+            background: #ffedd5;
+            color: #c2410c;
+        }
+
+        .logo-pink {
+            background: #fce7f3;
+            color: #be185d;
+        }
+
+        .logo-red {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .logo-dark {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+       
+        .channel-info {
+            min-width: 0;
+        }
+
+        .channel-info h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .channel-info p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .container {
+                margin: 28px auto;
+                padding: 0 16px;
+            }
+
+            .container h2 {
+                font-size: 23px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .thumbnail {
+                height: 190px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .thumbnail img {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ChannelHub</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#channels">Channels</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main class="container" id="home">
+
+        <h2 id="channels">Explore Channels</h2>
+
+        <div class="card-grid">
+
+            <!-- Card 1: Tech World -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                        alt="Technology and teamwork"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo">TW</div>
+
+                    <div class="channel-info">
+                        <h3>Tech World</h3>
+                        <p>Discover technology, gadgets and coding tips.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Code Zone -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                        alt="Programming code on a computer"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo logo-green">CZ</div>
+
+                    <div class="channel-info">
+                        <h3>Code Zone</h3>
+                        <p>Learn programming through simple tutorials.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Travel Vibes -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                        alt="Beautiful mountain landscape"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo logo-orange">TV</div>
+
+                    <div class="channel-info">
+                        <h3>Travel Vibes</h3>
+                        <p>Explore new places and travel adventures.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Creative Hub -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=80"
+                        alt="Creative workspace"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo logo-pink">CH</div>
+
+                    <div class="channel-info">
+                        <h3>Creative Hub</h3>
+                        <p>Find inspiration for design and creativity.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5: Gaming Zone -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+                        alt="Gaming setup"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo logo-red">GZ</div>
+
+                    <div class="channel-info">
+                        <h3>Gaming Zone</h3>
+                        <p>Gaming videos, reviews and useful tips.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6: Learn Daily -->
+            <article class="card">
+                <div class="thumbnail">
+                    <img
+                        src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80"
+                        alt="Books for learning"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="card-details">
+                    <div class="channel-logo logo-dark">LD</div>
+
+                    <div class="channel-info">
+                        <h3>Learn Daily</h3>
+                        <p>Build skills and learn something new every day.</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>

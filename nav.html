@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: wheat;
+        }
+
+        .nav {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .leftnav {
+            background-color:orange;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .rightnav {
+            background-color:blue;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    .mainbox {
+    margin: 50px auto;
+    border: 1px solid black;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+        }
+        .box{
+            height: 50px;
+            /* width: 498px; */
+            flex-grow: 1;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;                     
+        }
+        #box1{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="leftnav">
+            <a href="https://www.google.com" target="_blank">Google</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="rightnav">
+            <a href="https://course.acciojob.com/modules" target="_blank">AccioJob</a>
+        </div>
+    </div>
+
+    <div class="mainbox">
+        <div class="box" id="box1">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>

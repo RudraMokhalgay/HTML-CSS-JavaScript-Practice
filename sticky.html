@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Positioning Demo</title>
+    <style>
+        /* 1. The Container (Scrollable area) */
+        .container {
+            height: 400px;
+            width: 300px;
+            background-color: #f0f0f0;
+            border: 3px solid #333;
+            overflow-y: scroll; /* Makes this specific box scrollable */
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. The Sticky Header */
+        .sticky-header {
+            background-color: #ff4757;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            
+            /* --- THE STICKY MAGIC --- */
+            position: sticky;
+            top: 0; /* Sticks to the very top when you scroll */
+            z-index: 10; /* Ensures it stays on top of other text */
+        }
+
+        /* 3. Normal Content Inside */
+        .content {
+            padding: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- This header starts in normal flow, then sticks when you scroll -->
+        <div class="sticky-header">I am a Sticky Header!</div>
+        
+        <div class="content">
+            <p>Scroll down inside this box to see how the red header behaves.</p>
+            <p>Notice how it scrolls normally at first...</p>
+            <p>...but once it hits the top edge of the gray box, it locks in place!</p>
+            <p>Keep scrolling down...</p>
+            <p>It stays stuck right at the top while you read the rest of the text.</p>
+            <p>End of the container! Notice how the red header finally gets pushed away when the container ends.</p>
+        </div>
+    </div>
+
+</body>
+</html>

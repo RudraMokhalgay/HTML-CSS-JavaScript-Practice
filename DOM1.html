@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>
+        <h1 id="headingOne">Heading one</h1>
+        <h1 id="headingOne">heading two</h1>
+        <h2>heading three</h2>
+        <h2>heading four</h2>
+        <p>paragraph</p>
+    </div>
+
+    <div>
+        <button id="changeTextBtn">
+            change heading
+        </button>
+        <button id="changeTextBtn">
+             update heading
+        </button>
+    </div> -->
+    <div class=""container>
+        <h1>Heading</h1>
+        <button>Delete heading</button>
+
+    </div>
+    <script>
+        console.log("Javascript is working")
+        const h1=document.querySelector("h1")
+        const btn=document.querySelector("button")
+        // const h2s=document.querySelectorAll("h2")
+        // const btn=document.querySelector("#changeTextBtn")
+        // const h1=document.getElementById("headingOne")
+        // const btn=document.getElementById("changeTextBtn")
+        // h1.textContent="updated heading one"
+        console.log(btn,'btn')
+        btn.addEventListener("click",()=>{
+            console.log("btn clicked")
+            h1.remove()
+        })
+        // btn.addEventListener("click",changeText)
+        // function changeText(){
+        //     console.log("btn clicked")
+        //     h1.textContent="updated heading One"
+        // }
+
+        // console.log(h1,h2s,btn.textContent,'document')
+    </script>
+    
+</body>
+</html>
+
+
+<!-- step1:create a div in html
+ target that div with id
+ add event listner on click
+ give backgrounnd clour to div
+ give random background color to the div
+html>
